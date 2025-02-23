@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="Maket.css">
 </head>
 
 <body>
@@ -20,10 +20,11 @@
 	</div>
 	<h1>Talants</h1>
 	<div class="Hobbys">
-		<div class="Chess">Chess</div>
-		<div class="Triatl">Triathlone</div>
-		<div class="Kubik">Rubik's Cube</div>
-		<div class="Pro">Programming</div>
+		<div class="Chess" onclick="showText('chess-text')">Chess</div>
+		<div class="Triatl" onclick="showText('triatl-text')">Triathlone</div>
+		<div class="Kubik" onclick="showText('kubik-text')">Rubik's Cube</div>
+		<div class="Pro" onclick="showText('pro-text')">Programming</div>
+
 	</div>
 
 	<div class="progress">
@@ -32,9 +33,35 @@
 		<div class="Triatl-bar"></div>
 		<div class="Cube-bar"></div>
 	</div>
+	<!-- Скрытые блоки с текстом -->
+	<div id="chess-text" class="info-text">
+		I started my career at the age of 5, I played in many tournaments and took places.
+		I go to the DSHT club, they teach well. I am almost a strong member of the group,
+		I have been going for 2-3 years already.
+		<a href="https://lichess.org/@/Einar2013" target="_blank"
+			style="color: #4A90E2; text-decoration: none; display: block; margin-top: 10px;">
+			My Lichess Profile
+		</a>
+	</div>
 
+	<div id="triatl-text" class="info-text">I've been going to triathlon since summer and I've learned how to swim, not
+		be afraid of water, run faster and do many other things well. I swim crawl and come to classes every time.</div>
+	<div id="kubik-text" class="info-text">I learned to solve a Rubik's cube when I was 10 years old and since then the
+		record is 49 seconds and after I learned to solve 3 by 3 I was given a 4 by 4 Rubik's cube and I learned it too
+		but I can't solve 5 by 5 yet</div>
+	<div id="pro-text" class="info-text">I started programming when I was 7-8 years old, I learned with scratch, after
+		1-2 years I learned everything, then I downloaded Pycharm, learned Python for about 2 months, then I wanted to
+		create games through Pygame, I learned after 1 month, then I became interested in the frontend and started
+		creating websites</div>
 
-	<div class="Static"></div>
+	<script>function showText(id) {
+			// Скрываем все блоки
+			document.querySelectorAll('.info-text').forEach(el => el.style.display = 'none');
+
+			// Показываем нужный
+			document.getElementById(id).style.display = 'block';
+		}
+	</script>
 
 </body>
 
